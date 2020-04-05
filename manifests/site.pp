@@ -5,6 +5,9 @@ node default {
     owner   => 'root',
   }
 }
+node 'minecraft.puppet.vm' {
+  include role::minecraft_server
+  }
 node 'master.puppet.vm' {
   include role::master_server
 }
@@ -14,3 +17,4 @@ node /^web/ {
 node /^db/ {
   include role::db_server
 }
+node
